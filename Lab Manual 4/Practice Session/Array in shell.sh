@@ -34,3 +34,25 @@ echo ${arr[@]/*[aA]*/} # prints elements that don't contain 'a' or 'A'
 echo ${arr[@]//a/A} # replace 'a' with 'A'
 echo ${arr[@]}      # prints original array
 echo ${arr[0]//r/R} # replaces 'r' with 'R' in the first element
+#using loop
+arr=(1 12 31 4 5)
+
+# Initialize a variable i to 0
+i=0
+
+while [ $i -lt ${#arr[@]} ]
+do
+    # Print the elemen
+    echo ${arr[$i]}
+    i=$(expr $i + 1)
+done
+#print using for loop
+#!/bin/bash
+
+#  declare array
+arr=(1 12 31 4 5)
+for element in "${arr[@]}"
+do
+    # Print
+    echo "$element"
+done
